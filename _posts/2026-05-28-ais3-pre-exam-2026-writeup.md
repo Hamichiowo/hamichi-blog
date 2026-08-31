@@ -3,7 +3,7 @@ title: "AIS3 Pre-exam 2026 Writeup"
 date: 2026-05-28 00:00:00 +0800
 last_modified_at: 2026-05-28 00:00:00 +0800
 categories: [CTF, AIS3 Pre-exam 2026]
-tags: [CTF]
+tags: [Web, Pwn, Crypto, Rev]
 description: "AIS3 Pre-exam 2026 的 CTF Writeup，整理 Misc、Web、Pwn、Reverse、Crypto 等題目的解題流程與心得。"
 media_subpath: /assets/img/posts/pre-exam-2026-writeup
 image:
