@@ -19,6 +19,7 @@ image:
 ```
 
 先觀察一下`home.html`，沒有發現什麼，所以直接看 code
+
 ![home.html](file-20260613034659200.png)
 
 ```html
