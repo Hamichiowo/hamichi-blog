@@ -34,6 +34,7 @@ Challenge1.exe: PE32 executable for MS Windows 4.00 (GUI), Intel i386 Mono/.Net 
 
 猜測這裡進行了 `DECODE` 再進行了一次 `ENCODE`，所以嘗試找到可疑 Function 設 break point 讀變數
 直接用 dnSpy 把檔案開起來，看到以下架構：
+
 ![dnSpy](file-20260612034744034.png)
 
 架構說明：
@@ -49,6 +50,7 @@ Challenge1.exe: PE32 executable for MS Windows 4.00 (GUI), Intel i386 Mono/.Net 
 | `XXXXXXXXXXXXXXX.Properties` namespace | 專案屬性命名空間        | 放自動產生的 `Resources`、`Settings` 等 |
 
 了解基礎架構後我們應該先去看 `XXXXXXXXXXXXXXX` namespace 裡面放了什麼
+
 ![namespace](file-20260612034744028.png)
 
 發現 `btnDecode_Click` 很可疑，看一下寫了什麼
@@ -84,6 +86,7 @@ private void btnDecode_Click(object sender, EventArgs e)
 可以看出從 dat_secret 取出並逐 byte 處理加密資料，然後把 byte 的高 4 bits 和低 4 bits 交換，也就是 nibble swap，再跟 `0x29` 做 XOR，並把結果放進`text`
 
 我這裡應該就是把加密資料先解密，然後進行二次加密在顯示，所以我設了break point 在 `string text2 = "";` 並讀變數`text`，並成功發現FLAG
+
 ![Flag](file-20260612034744022.png)
 
 這題其實也可以直接 dump  `Resources.dat_secret` 並寫 decode 的程式去解密，因為我們有完整的加密流程
