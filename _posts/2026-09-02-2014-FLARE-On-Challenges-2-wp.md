@@ -19,7 +19,7 @@ image:
 ```
 
 先觀察一下`home.html`，沒有發現什麼，所以直接看 code
-![](/assets/img/posts/FLARE-On-Challenges-2-wp/file-20260613034659200.png)
+![home.html](file-20260613034659200.png)
 
 ```html
 <!DOCTYPE html>
