@@ -107,9 +107,9 @@ Decompilation：
 ## 利用
 如何建置 `shellcode`，我們先看我們需要做甚麼：
 1. 打開 flag
-> `EAX`：`5`
-> `EBX`：`const char *filename`
-> `ECX`：存放開啟模式旗標
+> `EAX`：`5`<br>
+> `EBX`：`const char *filename`<br>
+> `ECX`：存放開啟模式旗標<br>
 > `EDX`：存放檔案權限
 ```
 mov eax,0x5
@@ -123,9 +123,9 @@ xor edx,edx
 int 0x80
 ```
 2. 讀取 flag
-> `EAX`：`3`
-> `EBX`：`fd`
-> `ECX`：`buf addr`
+> `EAX`：`3`<br>
+> `EBX`：`fd`<br>
+> `ECX`：`buf addr`<br>
 > `EDX`：`size`
 ```
 mov ebx,eax
@@ -136,9 +136,9 @@ int 0x80
 ```
 
 3. 輸出 flag
-> `EAX`：`4`
-> `EBX`：`fd`
-> `ECX`：`buf addr`
+> `EAX`：`4`<br>
+> `EBX`：`fd`<br>
+> `ECX`：`buf addr`<br>
 > `EDX`：`size`
 ```
 mov ebx,1
