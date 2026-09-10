@@ -33,6 +33,7 @@ https://x86.syscall.sh/
 | ``ESP``   | 指向目前 stack 頂端                                         |
 | `EIP`     | 指向目前正在執行的指令                                           |
 | `EFLAGS`  | `CPU 狀態旗標，例如 Zero Flag、Carry Flag`                    |
+
 > 補充：
 > 32-bit ELF 的 `int 0x80` 就像是 64-bit ELF 的 `syscall`
 
